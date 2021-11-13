@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+ /* NAVBAR */
+ .navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #555;
+    font-size: 20px;
+}
+p{
+    color: #555;
+}
+.containernav{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+.header{
+    background: radial-gradient(#fff,#c8e6fa);
+}
+.header .row{
+    margin-top: 70px;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding:50px 0;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #22a6fd;
+    color: #fff;
+    padding:8px 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: #0c2230;
+}
+.containernav ul li a:hover{
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+}
+@media only screen and (max-width: 767px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;  
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .imgBox{
+        display:none;
+    }
+    .formBox{
+        margin: auto;
+    }
+    form h2, form input{
+        margin-left: 100px;
+    }
+    form h2{
+        transform: translateX(-100px);
+    }
+}
+
+
+
+/* LOGIN SIGNUP FORM */
+section#login{
+    box-sizing: border-box;
+    position: relative;
+    margin:0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 60vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    }
+    section#login h2{
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+    section#login .container{
+        position: relative;
+        width: 800px;
+        height: 500px;
+        background: #fff;
+        box-shadow: 0 15px 50px, rgba(0,0,0, 0.1);
+        overflow: hidden;
+    }
+    section#login .container .user{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    section#login .container .user .imgBox{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background:#ff0;
+        transition: 0.5s;
+    }
+    section#login .container .user .imgBox img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    section#login .container .user .formBox{
+        position: relative;
+        width: 40%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        transition: 0.5s;
+    }
+    section#login .container .user .formBox form input{
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        background: #f5f5f5;
+        color: #333;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        margin: 8px 0px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+    section#login .container .user .formBox form input[type="submit"]{
+        max-width: 100px;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: 0.5s;
+    }
+    section#login .container .user .formBox form .signup{
+      position: relative;
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #555;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    section#login .container .user .formBox form .signup a{
+      font-weight: 600;
+      text-decoration: none;
+      color: #677eff;
+    }
+    section#login .container .signupBox{
+      pointer-events: none;
+    }
+    section#login .container.active .signupBox{
+      pointer-events: initial;
+    }
+    section#login .container .signupBox .formBox{
+       left: 100%;
+    }
+    section#login .container.active .signupBox .formBox{
+       left: 0;
+    }
+    section#login .container .signupBox .imgBox{
+      left: -100%;
+    }
+    section#login .container.active .signupBox .imgBox{
+      left: 0;
+    }
+    
+    
+    
+    section#login .container .signinBox .formBox{
+      left: 0;
+    }
+    section#login .container.active .signinBox .formBox{
+      left: 100%;
+    }
+    section#login .container .signinpBox .imgBox{
+     left: 0;
+    }
+    section#login .container.active .signinBox .imgBox{
+     left: 100%;
+    }
+    
+
+
+
+
+/* footer */
+.footer{
+    background: radial-gradient(#fff,#caebf8,#a8e5fd);
+    color: #464646;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color:#464646;
+}
+.footer h3{
+    color:#000;
+    margin-bottom: 20px;
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex:1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #4e4e4e;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+
+
+
+/* BROWSE */
+.bgimage img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 85%;
+    filter: blur(3px);
+}
+.browseform h2{
+    color: white;
+    display: inline-block;
+    width: 50%;
+    backdrop-filter: blur(1px);
+    backdrop-filter: brightness(50%);
+    font-size: 44px;
+    transition: 0.5s;
+}
+.browseform p{
+    color: white;
+    margin-top: 15px;
+    display: inline-block;
+    width: 50%;
+    backdrop-filter: brightness(60%);
+    font-size: 28px;
+    transition: 0.5s;
+}
+.browseform h2:hover, .browseform p:hover{
+    letter-spacing: 1.5px;
+}
+.browseform{
+    text-align: center;
+    margin-top: 11%;
+    margin-bottom: 20%;
+}
+.browseform #browse{
+    display: grid;
+    align-items: center;
+    margin-left: 25%;
+    gap: 0;
+    border: none;
+    grid-template-columns:1fr 2fr 0.2fr 1.65fr;
+
+}
+.browseform #browse input{
+    margin-top: 40px;
+    /* text-align: center; */
+    font-size: 18px;
+    padding: 15px;
+    outline: #a8e5fd;
+    border: none;
+    cursor: pointer;
+}
+#city{
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+#address{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+#submit{
+    border-radius: 20%;
+    background: transparent;
+    backdrop-filter: brightness(20%);
+    color: white;
+}
+#submit:hover{
+    background: #a8e5fd;
+    color: black;
+}
