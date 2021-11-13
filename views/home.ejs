@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fliery - Food Delivery on the FLY!</title>
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 
-<body>
-    <h1>Working Fine</h1>
-</body>
+    
+    <%- include("header") -%>
 
-</html>
+    <!-- Login -->
+    <section id="login">
+        <div class="container">
+            <div class="user signinBox">
+                <div class="imgBox">
+                    <img src="public/images/signin.jpg">
+                </div>
+                <div class="formBox">
+                    <form action="/login" method="post">
+                        <h2 style="color: black;">Sign-In</h2>
+                        <input type="number" maxlength="10" name="" placeholder="Mobile Number">
+                        <input type="password" name="" placeholder="Password">
+                        <input type="submit" name="" value="Login">
+                        <p class="signup">Don't have an account? <a href="#login" onclick="toggleForm();">Sign Up.</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBox">
+                <div class="formBox">
+                    <form action="/signup" method="post">
+                        <h2 style="color: black;">Create An Account</h2>
+                        <input type="number" maxlength="10" name="" placeholder="Mobile Number">
+                        <input type="text" name="" placeholder="Name">
+                        <input type="password" name="" placeholder="Create Password">
+                        <input type="password" name="" placeholder="Confirm Password">
+                        <input type="submit" name="" value="Sign-Up">
+                        <p class="signup">Already have an account? <a href="#login" onclick="toggleForm();">Sign In.</a></p>
+                    </form>
+                </div>
+                <div class="imgBox">
+                    <img src="public/images/signup.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include("footer") -%>
+
+
+
+
+    
