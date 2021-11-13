@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliery - Food Delivery on the FLY!</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="header">
+        <div class="containernav">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="public/images/logo.png" width="150px"></a>
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="">Home</a></li>
+                        <li><a href="browse.html">Order Online</a></li>
+                        <li><a href="">Add Restaurant</a></li>
+                    </ul>
+                </nav>
+                <a href=""><img src="public/images/cart.png" width="30px" height="30px"></a>
+                <img src="public/images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Grab your favourite<br>snacks! Hurry up!</h1>
+                    <p>Discover the best <br> hard work gains success. Greatness will come.</p>
+                    <a href="" class="btn">ORDER NOW! &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="public/images/banner.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login -->
+    <section id="login">
+        <div class="container">
+            <div class="user signinBox">
+                <div class="imgBox">
+                    <img src="public/images/signin.jpg">
+                </div>
+                <div class="formBox">
+                    <form action="/" method="post">
+                        <h2 style="color: black;">Sign-In</h2>
+                        <input type="number" maxlength="10" name="" placeholder="Mobile Number">
+                        <input type="password" name="" placeholder="Password">
+                        <input type="submit" name="" value="Login">
+                        <p class="signup">Don't have an account? <a href="#login" onclick="toggleForm();">Sign Up.</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBox">
+                <div class="formBox">
+                    <form action="/" method="post">
+                        <h2 style="color: black;">Create An Account</h2>
+                        <input type="number" maxlength="10" name="" placeholder="Mobile Number">
+                        <input type="text" name="" placeholder="Name">
+                        <input type="password" name="" placeholder="Create Password">
+                        <input type="password" name="" placeholder="Confirm Password">
+                        <input type="submit" name="" value="Sign-Up">
+                        <p class="signup">Already have an account? <a href="#login" onclick="toggleForm();">Sign In.</a></p>
+                    </form>
+                </div>
+                <div class="imgBox">
+                    <img src="public/images/signup.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="containernav">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS devices.(Just for Styling)</p>
+                    <div class="app-logo">
+                        <img src="public/images/play-store.png">
+                        <img src="public/images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="public/images/logo.png">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reiciendis officia non quibusdam obcaecati.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright &copy; 2021 | Fliery</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
