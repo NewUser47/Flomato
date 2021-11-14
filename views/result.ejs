@@ -1,2 +1,16 @@
-<%- include("header") -%>
+<%- include("headerwhite") -%>
+
+<div class="small-container">
+            <h2>Top Picks for you!</h2>
+            <div class="row">
+
+                <% for var restaurant in results{ %>
+                    <div class="col-4">
+                    <img src="<%=restaurant.image%>" alt="<%=restaurant.name%>">
+                    <h4><%=restaurant.name%></h4>
+                    <p><%= restaurant.description%></p>  
+                    </div>
+                <% } %>
+        </div>
+        </div>
 <%- include("footer") -%>
