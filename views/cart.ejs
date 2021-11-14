@@ -1,2 +1,56 @@
-<%- include("header") -%>
+<%- include("headerwhite") -%>
+
+
+
+
+ <div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+
+
+        <% for var dish in menuitems{ %>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <div>
+                                <p><%=dish.name%></p>
+                                <h5>Price: $<small><%=dish.price%></small></h5>
+                                <br>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="0" onclick="calculate(); localprice();" min='0' max='9'></td>
+                    <td class="localprice"></td>
+                </tr>
+        <% } %>        
+
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td><button class="btn" onclick="total()">Calculate Total!</button></td>
+    </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td id="subtotal1">$0.00</td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td>$3.00</td>
+            </tr>
+            <tr>
+                <td>Total Payable Amount</td>
+                <td id="subtotal3">$3.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 <%- include("footer") -%>

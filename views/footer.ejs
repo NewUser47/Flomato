@@ -37,6 +37,51 @@
         <p class="copyright">Copyright &copy; 2021 | Fliery</p>
     </div>
 </div>
-<script src="index.js"></script>
+<script>
+    // adds 'active' class to the container when signin or signup is clicked
+function toggleForm(){
+    var container= document.querySelector('.container');
+    container.classList.toggle('active');
+    }
+
+
+//menu toggle
+var menuitems=document.getElementById("menuitems");
+        menuitems.style.maxHeight="0px";
+        function menutoggle(){
+            if(menuitems.style.maxHeight=="0px")
+            {
+                menuitems.style.maxHeight="200px";
+            }
+            else{
+                menuitems.style.maxHeight="0px";
+            }
+        }
+
+//cart menu
+var quantity;
+        var price;
+        var local;
+        var total_price=0;
+function calculate(){
+    quantity = document.querySelectorAll("table tr td input");
+    price = document.querySelectorAll("table tr td small");
+    local=document.querySelectorAll(".localprice")
+}
+function total(){
+    for(var i=0;i<quantity.length;i++){
+        total_price = total_price + (parseInt(quantity[i].value) * parseInt(price[i].innerHTML));
+    }
+    document.getElementById("subtotal1").innerHTML="$"+total_price.toString()+".00"
+    document.getElementById("subtotal3").innerHTML="$"+(total_price+3).toString()+".00"
+}
+function localprice()
+{
+    for(var i=0;i<quantity.length;i++){
+        local[i].innerHTML="$"+(parseInt(price[i].innerHTML)*parseInt(quantity[i].value)).toString()+".00";
+        console.log(local[i].innerHTML);
+    }
+}
+</script>
 </body>
 </html>
